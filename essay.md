@@ -1,19 +1,28 @@
-Reproducible Figures Are More Valuable Than Fancy Figures
+***Reproducible Figures Are More Valuable Than Fancy Figures**
 
-In computational and data-driven science, figures are often judged by how polished they look rather than by how they were produced, and this has quietly become a problem. Highly refined visuals created in tools such as Adobe Illustrator may be visually appealing, but they often break the link between the underlying data and the final figure. Once a plot has been manually edited, recoloured, resized, or rearranged outside the analysis environment, it becomes difficult, and sometimes impossible, to reproduce exactly. In contrast, parameterized, script-driven figures generated in R preserve the full analytical history of a result, making them inherently more valuable for scientific practice.
+**Introduction**
 
-A reproducible figure is one that can be regenerated from raw or processed data using the same code, producing the same output without manual intervention. This is especially important during peer review, where reviewers may question how a particular trend was obtained, how a subset of data was selected, or whether alternative parameters would change the interpretation. When figures are generated directly from R scripts, these questions can be answered by inspecting and re-running the code. Illustrator-polished figures, no matter how attractive, cannot offer this level of transparency, because the logic behind visual choices is rarely documented in a way that can be audited.
+In computational science, figures are often judged by their polish rather than their provenance. While visuals refined in tools like Adobe Illustrator offer aesthetic appeal, they often sever the link between raw data and the final output. This "black box" approach makes figures difficult to reproduce exactly once they are moved outside the analysis environment. In contrast, parameterized R scripts preserve the full analytical history, prioritizing scientific integrity over cosmetic perfection.
 
-The importance of reproducibility becomes even more evident in regulatory and audit-driven science. In fields such as clinical research, public health, and bioinformatics, analyses may be reviewed months or years after they were first produced. Regulatory bodies and institutional audits require clear documentation showing how results were generated and whether they can be reproduced independently. Script-based plotting in R, particularly when combined with version control and literate programming tools, provides a defensible trail from data to figure. Manually adjusted figures, on the other hand, are difficult to justify under audit conditions, as small visual changes may not be traceable to specific analytical decisions.
+**The Transparency of Script-Based Workflows**
 
-Another advantage of parameterized plotting is scalability. When figure aesthetics are controlled by code rather than manual editing, the same script can be applied across multiple datasets, experimental conditions, or time points with minimal modification. This reduces the risk of inconsistencies between figures and supports comparative analysis. While Illustrator-based workflows encourage one-off, publication-specific visuals, reproducible R scripts support systematic and repeatable figure generation, which aligns better with the principles of open and reproducible science.
+A reproducible figure is one that can be regenerated from data without manual intervention. During peer review, this transparency allows for "deep scrutiny." If a reviewer questions a data subset or a specific trend, the author can provide the code used to generate the visual. This aligns with the "Ten Simple Rules for Reproducible Computational Research," which emphasize avoiding manual manipulation to ensure every result is trackable (Sandve et al., 2013).
 
-This is not to argue that figures should be unattractive or poorly designed. Rather, visual clarity should emerge from well-written code and thoughtful parameter choices, not from post-hoc polishing. In a scientific ecosystem increasingly shaped by peer review scrutiny, data audits, and regulatory oversight, the value of a figure lies less in how impressive it looks and more in how reliably it can be reproduced. From this perspective, a clean, script-driven R figure is not a limitation but a strength, because it prioritizes transparency, accountability, and scientific trust over visual ornamentation.
+**Regulatory Science and the Audit Trail**
 
-References
+The value of reproducibility is most critical in audit-driven environments, such as clinical research. Regulatory bodies, governed by standards like **FDA 21 CFR Part 11**, require secure, time-stamped audit trails for electronic records (U.S. Food and Drug Administration, 2024). Scripted plots provide a defensible path from raw data to the final graph, satisfying the "ALCOA" requirements (Attributable, Legible, Contemporaneous, Original, and Accurate). Manually adjusted visuals lack this history and are difficult to justify under strict audit conditions.
 
-1\. Peng, R. D. (2011). Reproducible research in computational science. \*Science\*, 334(6060), 1226-1227.
+**Scalability and Systematic Reliability**
 
-2\. Sandve, G. K., Nekrutenko, A., Taylor, J., & Hovig, E. (2013). Ten simple rules for reproducible computational research. \*PLoS Computational Biology\*, 9(10), e1003285.
+Parameterized plotting supports a "Single Source of Truth." Unlike Illustrator-based workflows that encourage one-off visuals, R scripts can be applied across multiple datasets or time points with minimal modification. This scalability reduces the risk of human error and ensures that the figure generation process is as repeatable as the experiment itself, supporting the broader goals of open science (Stodden et al., 2018).
 
-3\. Stodden, V., Seiler, J., & Ma, Z. (2018). An empirical analysis of journal policy effectiveness for computational reproducibility. \*PNAS\*, 115(11), 2584-2589.
+**Conclusion**
+
+In a scientific ecosystem shaped by peer review and regulatory oversight, the value of a figure lies in its reliability. Visual clarity should emerge from well-written code, not post-hoc polishing. By prioritizing script-driven R figures, we move toward a standard of "validation by design," ensuring that scientific trust is built on verifiable evidence rather than visual ornamentation.
+
+**References**
+
+- **Peng, R. D. (2011).** Reproducible research in computational science. _Science_, 334(6060), 1226-1227.
+- **Sandve, G. K., et al. (2013).** Ten simple rules for reproducible computational research. _PLoS Computational Biology_, 9(10).
+- **Stodden, V., et al. (2018).** An empirical analysis of journal policy effectiveness for computational reproducibility. _PNAS_, 115(11), 2584-2589.
+- **U.S. Food and Drug Administration (FDA). (2024).** _Electronic Systems, Electronic Records, and Electronic Signatures in Clinical Investigations_.
